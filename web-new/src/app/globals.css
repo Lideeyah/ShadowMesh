@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #0A0A0A;
+    --foreground: #EDEDED;
+
+    /* Brand Colors */
+    --color-zcash: #F4B728;
+    --color-mina: #E76F51;
+    /* Replaced with a distinct neon orange/blue if needed, using generic neon for now or sticking to brand */
+    --color-starknet: #8B5CF6;
+    --color-near: #10B981;
+    --color-axelar: #EC4899;
+    --color-fhenix: #06B6D4;
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: 20px;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+}
+
+/* Utilities for Glassmorphism */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Neon Glows */
+.glow-zcash {
+    box-shadow: 0 0 20px rgba(244, 183, 40, 0.2);
+}
+
+.glow-mina {
+    box-shadow: 0 0 20px rgba(231, 111, 81, 0.2);
+}
+
+.glow-starknet {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.glow-near {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
